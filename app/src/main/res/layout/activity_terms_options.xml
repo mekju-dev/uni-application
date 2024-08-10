@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.terms.termsOptions">
+
+    <EditText
+        android:id="@+id/editTermName"
+        android:layout_width="306dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Term Name"
+        android:inputType="text"
+        android:nextFocusDown="@id/editStartDateText"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <EditText
+        android:id="@+id/editStartDateText"
+        android:layout_width="296dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="60dp"
+        android:editable="false"
+        android:hint="start date"
+        android:nextFocusDown="@id/endDateText"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:flow_horizontalAlign="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTermName" />
+
+    <EditText
+        android:id="@+id/editEndDateText"
+        android:layout_width="296dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="60dp"
+        android:editable="false"
+        android:hint="end date"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editStartDateText" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="170dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="44dp"
+        android:text="Edit Term"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/cancelEditTermButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:onClick="cancelEditTermClick"
+        android:text="Cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editEndDateText" />
+
+    <Button
+        android:id="@+id/deleteEditTermButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="cancelEditTermClick"
+        android:text="Delete"
+        app:layout_constraintEnd_toStartOf="@+id/saveEditTermButton"
+        app:layout_constraintStart_toEndOf="@+id/cancelEditTermButton"
+        app:layout_constraintTop_toBottomOf="@+id/editEndDateText" />
+
+    <Button
+        android:id="@+id/saveEditTermButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="50dp"
+        android:onClick="saveEditTermsClick"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editEndDateText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

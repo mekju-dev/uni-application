@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.courses.addCoursesActivity">
+
+        <EditText
+            android:id="@+id/addCourseEndDate"
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="57dp"
+            android:clickable="true"
+            android:editable="false"
+            android:hint="End Date"
+            android:nextFocusDown="@id/endDateText"
+            android:onClick="endDatePicker"
+            android:singleLine="true"
+            android:textAlignment="center"
+            app:flow_horizontalAlign="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addCourseStartDate" />
+
+        <EditText
+            android:id="@+id/addCourseTitle"
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginEnd="58dp"
+            android:hint="Course Name"
+            android:nextFocusDown="@id/endDateText"
+            android:singleLine="true"
+            android:textAlignment="center"
+            app:flow_horizontalAlign="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <EditText
+            android:id="@+id/addCourseStartDate"
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="58dp"
+            android:clickable="true"
+            android:editable="false"
+            android:hint="Start Date"
+            android:nextFocusDown="@id/endDateText"
+            android:onClick="startDatePicker"
+            android:singleLine="true"
+            android:textAlignment="center"
+            app:flow_horizontalAlign="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:id="@+id/textInputLayout2"
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addCourseEmail">
+
+            <AutoCompleteTextView
+                android:id="@+id/addCourseTerm"
+                android:layout_width="296dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="58dp"
+                android:clickable="true"
+                android:editable="false"
+                android:hint="Term"
+                android:nextFocusDown="@id/addAssessmentCourse"
+                android:singleLine="true"
+                android:inputType="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addCourseTitle" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <EditText
+            android:id="@+id/addCourseEmail"
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="58dp"
+            android:hint="CI Email"
+            android:nextFocusDown="@id/endDateText"
+            android:singleLine="true"
+            android:textAlignment="center"
+            app:flow_horizontalAlign="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addCoursePhone" />
+
+        <EditText
+            android:id="@+id/addCoursePhone"
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="58dp"
+            android:hint="CI Phone"
+            android:maxLength="12"
+            android:nextFocusDown="@id/endDateText"
+            android:phoneNumber="true"
+            android:singleLine="true"
+            android:textAlignment="center"
+            app:flow_horizontalAlign="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addCourseInstructor" />
+
+        <EditText
+            android:id="@+id/addCourseInstructor"
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="58dp"
+            android:hint="Course Instructor"
+            android:nextFocusDown="@id/endDateText"
+            android:singleLine="true"
+            android:textAlignment="center"
+            app:flow_horizontalAlign="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:id="@+id/textInputLayout"
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addCourseTitle">
+
+            <AutoCompleteTextView
+                android:id="@+id/addCourseStatus"
+                android:layout_width="296dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="58dp"
+                android:clickable="true"
+                android:editable="false"
+                android:hint="Course Status"
+                android:nextFocusDown="@id/addAssessmentCourse"
+                android:singleLine="true"
+                android:inputType="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/addCourseTitle" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="170dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="25dp"
+            android:text="Add Course"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/addNote"
+            android:layout_width="296dp"
+            android:layout_height="wrap_content"
+            android:hint="Note"
+            android:singleLine="false"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addCourseEndDate" />
+
+        <Button
+            android:id="@+id/cancelAddCourseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="50dp"
+            android:onClick="cancelAddCoursesClick"
+            android:text="Cancel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addNote" />
+
+        <Button
+            android:id="@+id/saveAddCourseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="100dp"
+            android:onClick="saveAddCoursesClick"
+            android:text="Save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/cancelAddCourseButton"
+            app:layout_constraintTop_toBottomOf="@+id/addNote" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

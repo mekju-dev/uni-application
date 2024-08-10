@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.assessments.addAssessmentsActivity">
+
+
+    <EditText
+        android:id="@+id/addAssessmentStartDate"
+        android:layout_width="296dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginEnd="58dp"
+        android:editable="false"
+        android:hint="Start Date"
+        android:nextFocusDown="@id/endDateText"
+        android:singleLine="true"
+        android:textAlignment="center"
+        app:flow_horizontalAlign="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout6" />
+
+    <EditText
+        android:id="@+id/addAssessmentTitle"
+        android:layout_width="296dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="58dp"
+        android:hint="Assessment Name"
+        android:nextFocusDown="@id/addAssessmentType"
+        android:singleLine="true"
+        android:textAlignment="center"
+        app:flow_horizontalAlign="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:id="@+id/textInputLayout6"
+        android:layout_width="296dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayout">
+
+        <AutoCompleteTextView
+            android:id="@+id/addAssessmentCourse"
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:editable="false"
+            android:hint="Assessment's Course"
+            android:nextFocusDown="@id/addAssessmentDate"
+            android:singleLine="true"
+            android:inputType="none"
+            android:textAlignment="center"
+            app:flow_horizontalAlign="center" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+        android:id="@+id/addAssessmentDate"
+        android:layout_width="296dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginEnd="58dp"
+        android:editable="false"
+        android:hint="End Date"
+        android:nextFocusDown="@id/endDateText"
+        android:singleLine="true"
+        android:textAlignment="center"
+        app:flow_horizontalAlign="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addAssessmentStartDate" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="25dp"
+        android:text="Add Assessments"
+        android:textSize="24sp"
+        app:layout_anchorGravity="center|top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/cancelAddAssessmentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="24dp"
+        android:onClick="cancelAddCoursesClick"
+        android:text="Cancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addAssessmentDate" />
+
+    <Button
+        android:id="@+id/saveAddAssessmentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="100dp"
+        android:onClick="saveAddCoursesClick"
+        android:text="Save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.642"
+        app:layout_constraintStart_toEndOf="@+id/cancelAddAssessmentButton"
+        app:layout_constraintTop_toBottomOf="@+id/addAssessmentDate" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:id="@+id/textInputLayout"
+        android:layout_width="296dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addAssessmentTitle">
+
+        <AutoCompleteTextView
+            android:id="@+id/addAssessmentType"
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            android:clickable="true"
+            android:editable="false"
+            android:hint="Assessment Type"
+            android:nextFocusDown="@id/addAssessmentCourse"
+            android:singleLine="true"
+            android:inputType="none"
+            android:textAlignment="center"
+            app:flow_horizontalAlign="center" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

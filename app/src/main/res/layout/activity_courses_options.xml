@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.courses.coursesOptions">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/editCourseEndDate"
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="57dp"
+            android:editable="false"
+            android:hint="End Date"
+            android:singleLine="true"
+            android:textAlignment="center"
+            app:flow_horizontalAlign="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editCourseStartDate" />
+
+        <EditText
+            android:id="@+id/editCourseTitle"
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="58dp"
+            android:hint="Course Name"
+            android:nextFocusDown="@id/editCourseStatus"
+            android:singleLine="true"
+            android:textAlignment="center"
+            app:flow_horizontalAlign="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <EditText
+            android:id="@+id/editCourseStartDate"
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="58dp"
+            android:clickable="true"
+            android:editable="false"
+            android:hint="Start Date"
+            android:nextFocusDown="@id/editCourseEndDate"
+            android:singleLine="true"
+            android:textAlignment="center"
+            app:flow_horizontalAlign="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:id="@+id/textInputLayout3"
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editCourseEmail">
+
+            <AutoCompleteTextView
+                android:id="@+id/editCourseTerm"
+                android:layout_width="296dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="58dp"
+                android:clickable="true"
+                android:hint="Term"
+                android:inputType="none"
+                android:nextFocusDown="@id/editCourseStartDate"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <EditText
+            android:id="@+id/editCourseEmail"
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="58dp"
+            android:hint="CI Email"
+            android:nextFocusDown="@id/editCourseTerm"
+            android:singleLine="true"
+            android:textAlignment="center"
+            app:flow_horizontalAlign="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editCoursePhone" />
+
+        <EditText
+            android:id="@+id/editCoursePhone"
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="58dp"
+            android:hint="CI Phone"
+            android:maxLength="12"
+            android:nextFocusDown="@id/editCourseEmail"
+            android:phoneNumber="true"
+            android:singleLine="true"
+            android:textAlignment="center"
+            app:flow_horizontalAlign="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editCourseInstructor" />
+
+        <EditText
+            android:id="@+id/editCourseInstructor"
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="58dp"
+            android:hint="Course Instructor"
+            android:nextFocusDown="@id/editCoursePhone"
+            android:singleLine="true"
+            android:textAlignment="center"
+            app:flow_horizontalAlign="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout4" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:id="@+id/textInputLayout4"
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editCourseTitle">
+
+            <AutoCompleteTextView
+                android:id="@+id/editCourseStatus"
+                android:layout_width="296dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="58dp"
+                android:clickable="true"
+                android:hint="Course Status"
+                android:inputType="none"
+                android:nextFocusDown="@id/editCourseInstructor"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <EditText
+            android:id="@+id/editCourseNote"
+            android:layout_width="296dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="58dp"
+            android:hint="Course Note"
+            android:singleLine="true"
+            android:textAlignment="center"
+            app:flow_horizontalAlign="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editCourseEndDate" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="170dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="25dp"
+            android:text="Edit Course"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/cancelEditTermButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="16dp"
+            android:onClick="cancelEditCoursesClick"
+            android:text="Cancel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editCourseNote" />
+
+        <Button
+            android:id="@+id/deleteEditTermButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="cancelEditCoursesClick"
+            android:singleLine="false"
+            android:text="Delete"
+            app:layout_constraintEnd_toStartOf="@+id/saveEditTermButton"
+            app:layout_constraintHorizontal_bias="0.431"
+            app:layout_constraintStart_toEndOf="@+id/cancelEditTermButton"
+            app:layout_constraintTop_toBottomOf="@+id/editCourseNote" />
+
+        <Button
+            android:id="@+id/saveEditTermButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="48dp"
+            android:onClick="saveEditCoursesClick"
+            android:text="Save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editCourseNote" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
