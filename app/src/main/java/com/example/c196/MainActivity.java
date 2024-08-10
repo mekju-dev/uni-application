@@ -17,7 +17,7 @@ import com.example.c196.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-
+    //TEST
 
     //termsDbHelper myDb;
     //coursesDbHelper cDb;
